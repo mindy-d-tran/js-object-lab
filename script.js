@@ -47,3 +47,9 @@ console.log("-----Part 4-----");
 // remove first object
 csvObject.shift();
 console.log(csvObject);
+
+// adding object at index 1. must include 0 if you dont want to delete anything
+csvObject.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+
+// adding object to the end of the array
+csvObject.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
