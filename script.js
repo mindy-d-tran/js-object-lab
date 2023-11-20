@@ -75,16 +75,22 @@ let objToCSV = [];
 // store keys in array first
 objToCSV[0] = Object.keys(csvObject[0]);
 
+objToCSV[0][0]= objToCSV[0][0].toUpperCase();
+
+for(let i=1; i<objToCSV[0].length;i++){
+  let str = ""
+  str += objToCSV[0][i][0].toUpperCase();
+  str+= objToCSV[0][i].slice(1);
+  // console.log(capLetter);
+  objToCSV[0][i] = str;
+}
+
+console.log(objToCSV);
 // add values to array
 for (let i = 0; i < csvObject.length; i++) {
   objToCSV.push(Object.values(csvObject[i]));
 }
 
-for(let i=0; i<objToCSV.length;i++){
-  let lastIndex = objToCSV[i].length-1;
-  objToCSV[i][lastIndex]+="\n"
-}
-
-let flatObj =  objToCSV.flat(1);
-let strCSV = flatObj.join(",")
-console.log(strCSV);
+// join array by \n
+let flatObj =  objToCSV.join("\n");
+console.log(flatObj);
