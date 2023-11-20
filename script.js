@@ -46,7 +46,6 @@ console.log("-----Part 4-----");
 
 // remove first object
 csvObject.shift();
-console.log(csvObject);
 
 // adding object at index 1. must include 0 if you dont want to delete anything
 csvObject.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" });
@@ -60,3 +59,13 @@ for(let i=0; i <csvObject.length;i++) {
 }
 avgAge/=csvObject.length;
 console.log(`Average age: ${avgAge}`);
+
+
+// part 5
+console.log("-----Part 5-----");
+
+let objToCSV = [];
+
+objToCSV[0] = Object.keys(csvObject[0]);
+
+console.log(objToCSV);
