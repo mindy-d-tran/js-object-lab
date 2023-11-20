@@ -1,4 +1,4 @@
-// part 1 + 2 
+// part 1 + 2
 console.log("-----Part 1 & 2-----");
 let csv =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
@@ -48,24 +48,34 @@ console.log("-----Part 4-----");
 csvObject.shift();
 
 // adding object at index 1. must include 0 if you dont want to delete anything
-csvObject.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+csvObject.splice(1, 0, {
+  id: "48",
+  name: "Barry",
+  occupation: "Runner",
+  age: "25",
+});
 
 // adding object to the end of the array
 csvObject.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
 let avgAge = 0;
-for(let i=0; i <csvObject.length;i++) {
-    avgAge += parseInt(csvObject[i].age);
+for (let i = 0; i < csvObject.length; i++) {
+  avgAge += parseInt(csvObject[i].age);
 }
-avgAge/=csvObject.length;
+avgAge /= csvObject.length;
 console.log(`Average age: ${avgAge}`);
-
 
 // part 5
 console.log("-----Part 5-----");
 
 let objToCSV = [];
 
+// store keys in array first
 objToCSV[0] = Object.keys(csvObject[0]);
+
+// add values to array
+for (let i = 0; i < csvObject.length; i++) {
+  objToCSV.push(Object.values(csvObject[i]));
+}
 
 console.log(objToCSV);
