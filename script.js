@@ -5,7 +5,6 @@ let csv =
 
 console.log(csv);
 let csvArray = csv.split("\n");
-// console.log(csvArray);
 
 let index = 0;
 //edit the array even further to make it a 2d array
@@ -81,11 +80,9 @@ for(let i=1; i<objToCSV[0].length;i++){
   let str = ""
   str += objToCSV[0][i][0].toUpperCase();
   str+= objToCSV[0][i].slice(1);
-  // console.log(capLetter);
   objToCSV[0][i] = str;
 }
 
-console.log(objToCSV);
 // add values to array
 for (let i = 0; i < csvObject.length; i++) {
   objToCSV.push(Object.values(csvObject[i]));
