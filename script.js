@@ -53,3 +53,10 @@ csvObject.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" 
 
 // adding object to the end of the array
 csvObject.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+
+let avgAge = 0;
+for(let i=0; i <csvObject.length;i++) {
+    avgAge += parseInt(csvObject[i].age);
+}
+avgAge/=csvObject.length;
+console.log(`Average age: ${avgAge}`);
