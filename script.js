@@ -2,6 +2,8 @@
 console.log("-----Part 1 & 2-----");
 let csv =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+
+console.log(csv);
 let csvArray = csv.split("\n");
 // console.log(csvArray);
 
@@ -78,4 +80,11 @@ for (let i = 0; i < csvObject.length; i++) {
   objToCSV.push(Object.values(csvObject[i]));
 }
 
-console.log(objToCSV);
+for(let i=0; i<objToCSV.length;i++){
+  let lastIndex = objToCSV[i].length-1;
+  objToCSV[i][lastIndex]+="\n"
+}
+
+let flatObj =  objToCSV.flat(1);
+let strCSV = flatObj.join(",")
+console.log(strCSV);
