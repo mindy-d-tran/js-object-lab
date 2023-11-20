@@ -40,3 +40,10 @@ for (let i = 0; i < csvObject.length; i++) {
 }
 
 console.log(csvObject);
+
+//part 4
+console.log("-----Part 4-----");
+
+// remove first object
+csvObject.shift();
+console.log(csvObject);
