@@ -74,6 +74,9 @@ let objToCSV = [];
 // store keys in array first
 objToCSV[0] = Object.keys(csvObject[0]);
 
+/* capitalizing the tags 
+credit to Dillion Megida https://www.freecodecamp.org/news/javascript-capitalize-first-letter-of-word/
+*/
 objToCSV[0][0]= objToCSV[0][0].toUpperCase();
 
 for(let i=1; i<objToCSV[0].length;i++){
